@@ -94,19 +94,19 @@ def main():
     # 2-D Space
 
     plt.subplot(425)
-    plt.title("Problem 2f: Lyapunov Function in Bistable Switch")
+    plt.title("Problem 2f: Lyapunov Function With (β<0)")
     plt.ylabel("L(x)")
-    x1 = np.linspace(0, 1)
-    x2 = np.linspace(0, 1)
-    x = np.meshgrid(x1, x2)
-    print(x)
-    beta = -4
+    # x1 = np.linspace(0, 1)
+    # x2 = np.linspace(0, 1)
+    # x = np.meshgrid(x1, x2)
+    # print(x)
+    beta = -5
     plt.xlabel("x")
-    plt.plot(x, L_mat(x, beta, gamma), label="beta = 4 (infinite local minima)")
+    plt.plot(x, L(x, beta, gamma), label="beta = " + str(beta))
     beta = -3.9
-    plt.plot(x, L_mat(x, beta, gamma), label="beta = 3.9 (1 local minima)")
+    plt.plot(x, L(x, beta, gamma), label="beta = " + str(beta))
     beta = -4.1
-    plt.plot(x, L_mat(x, beta, gamma), label="beta = 4.1 (2 local minima)")
+    plt.plot(x, L(x, beta, gamma), label="beta = " + str(beta))
     plt.legend()
 
 
