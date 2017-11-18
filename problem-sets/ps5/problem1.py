@@ -45,7 +45,7 @@ def plot():
 
 def main():
     mlp = MLP("mnistabridged.mat", 25)
-    # mlp.train()
+    mlp.train()
     plot()
 
 

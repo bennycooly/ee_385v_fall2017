@@ -201,7 +201,7 @@ class MLP:
                 self.layers[0][j] = self.training_set.data[i][j]
             self.forward_propagate()
             solution = np.zeros(10)
-            solution[self.training_set.labels[0]] = 1
+            solution[self.training_set.labels[i]] = 1
             print("Solution:")
             print(solution)
 
